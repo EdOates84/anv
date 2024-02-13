@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'
-
+import anv from "./images/anv.jpeg"
 const Footer= () =>  {
   
     return (
@@ -9,7 +9,8 @@ const Footer= () =>  {
         
                     <div class="footer-left">
         
-                        <h3>Company<span>logo</span></h3>
+                        {/* <h3>Company<span>logo</span></h3> */}
+                        <img style={{width:'70px'}} src={anv} />
         
                         <p class="footer-links">
                             <a href="#" class="link-1">Home</a>

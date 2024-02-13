@@ -6,6 +6,15 @@
 
 .containerm {
   min-height: 100vh;
+  h2{
+    position:relative;
+    width:max-content;
+  }
+  svg{
+    position:absolute;
+    left:100%;
+    top:0;
+  }
 }
 
 .containerm {

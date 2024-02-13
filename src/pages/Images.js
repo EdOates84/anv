@@ -3,6 +3,23 @@ import { Container, Section } from '../style';
 import Navbar from "./Navbar";
 import Modal from "react-modal";
 import "../Gallery.css"
+import styled from "styled-components"
+import i1 from "../images/i1.jpg";
+import i2 from "../images/i2.jpg";
+import i3 from "../images/i3.jpg";
+import i4 from "../images/i4.jpg";
+import i5 from "../images/i5.jpg";
+import i6 from "../images/i6.jpg";
+import i7 from "../images/i7.jpg";
+import i8 from "../images/i8.jpg";
+import i9 from "../images/i9.jpg";
+import i10 from "../images/i10.jpg";
+import i11 from "../images/i11.jpg";
+import i12 from "../images/i12.jpg";
+import i13 from "../images/i13.jpg";
+import i14 from "../images/i14.jpg";
+import i15 from "../images/i15.jpg";
+import i16 from "../images/i16.jpg";
 
 const Images= () =>  {
   
@@ -12,25 +29,26 @@ const Images= () =>  {
 <Section>
  <h1>Responsive Image Gallery</h1>
 <div id="gallery" class="container-fluid">  
-  <img src="https://source.unsplash.com/1600x1200?female,portrait" class="img-responsive" />
-  <img src="https://source.unsplash.com/1024x768?female,portrait" class="img-responsive" />
-   <img src="https://source.unsplash.com/1366x768?female,portrait" class="img-responsive"/>
-  <video class="vid" controls>
+  <img src={i1} class="img-responsive" />
+  <img src={i2} class="img-responsive" />
+   <img src={i3} class="img-responsive"/>
+  {/* <video class="vid" controls>
     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
     </source>
-  </video>
-  <img src="https://source.unsplash.com/1920x1080?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/640x360?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/320x640?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/1200x1600?female,portrait" class="card img-responsive"/>
-  <img src="https://source.unsplash.com/800x600?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/600x800?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/400x600?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/600x400?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/1100x1600?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/1600x1100?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/992x768?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/768x992?female,portrait" class="img-responsive"/>
+  </video> */}
+  <img src={i4} class="img-responsive"/>
+  <img src={i5} class="img-responsive"/>
+<img src={i6} class="img-responsive"/>
+  <img src={i7} class="card img-responsive"/>
+  <img src={i8} class="img-responsive"/>
+  <img src={i9} class="img-responsive"/>
+  <img src={i10} class="img-responsive"/>
+  <img src={i11} class="img-responsive"/>
+<img src={i12} class="img-responsive"/>
+<img src={i13} class="img-responsive"/>
+<img src={i14} class="img-responsive"/>
+<img src={i15} class="img-responsive"/>
+<img src={i16} class="img-responsive"/>
 
 </div>
 
@@ -45,9 +63,60 @@ const Images= () =>  {
   </div>
 </div>
 </Section>
+<div>
+<div>
+  <Img>
+<img src={i1} />
+  </Img>
+  <Img className="a">
+<img src={i2} />
+  </Img>
+  <Img>
+<img src={i3} />
+  </Img>
+  <Img className="a">
+<img src={i4} />
+  </Img>
+  <Img>
+<img src={i5} />
+  </Img>
+  <Img className="a">
+<img src={i6} />
+  </Img>
+  <Img>
+<img src={i7} />
+  </Img>
+  <Img className="a">
+<img src={i8} />
+  </Img>
+  <Img>
+<img src={i9} />
+  </Img>
+  <Img>
+{/* <img src={i9} /> */}
+  </Img>
+</div>
+</div>
       </div>
     );
   }
   
 export default Images;
-  
+const Img = styled.div`
+position:sticky;
+top:10vh;
+display:flex;
+justify-content:center;
+align-items:center;
+height:40vh;
+
+  img{
+max-width:60vw;
+max-height:70vh;
+  }
+  &.a{
+    img{
+      transform:rotate(10deg);
+    }
+  }
+  `
