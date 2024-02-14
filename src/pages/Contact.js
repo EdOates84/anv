@@ -5,6 +5,7 @@ import styled from "styled-components"
 import bg from "../images/i4.jpg"
 import emailjs from '@emailjs/browser';
 import "../Book.css"
+import Form from '../Form';
 function Contact() {
   const form = useRef();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -12,16 +13,23 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const phoneInput = form.current.querySelector('input[name="from_email"]');
+    const phoneNumber = phoneInput.value.trim();
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      alert('Please enter a 10-digit numeric phone number.');
+      return; // Exit the function without submitting the form
+    }
     emailjs.sendForm('service_t7sw72h', 'template_dzsuutk', form.current, 'QmYOthBiFrvrrpg_T')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
+      setFormSubmitted(true);
   };
 
   const handleSubmit = () => {
-    setFormSubmitted(true);
+    // setFormSubmitted(true);
   };
 
   const handleClick = () => {
@@ -33,28 +41,29 @@ function Contact() {
       <Navbar/>
 
      </StyledSection>
-     <Section style={{height:'100vh'}}>
+     <Section >
       <Container>
-        <Text>
+        {/* <Text>
           <h2>
       Get in Touch
           </h2>
         </Text>
-        <Form>
-      <Button onClick={handleClick}>
+        <Button onClick={handleClick}>
       Chat with us
-      </Button>
+      </Button> */}
+        {/* <Form> */}
+{/*      
       <StyledForm isHidden={formSubmitted} ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="from_name" />
-      <label>Email</label>
-      <input type="email" name="from_email" />
+      <label>Phone no.</label>
+      <input type="tel" pattern="[0-9]{10}" name="from_email" />
       <label>Message</label>
       <textarea name="message" />
       <Submit type="submit" value="Send" onClick={handleSubmit} />
-    </StyledForm>
-    <Animation isHidden={formSubmitted} class="canvas">
-  <div class="notepad">
+    </StyledForm> */}
+   
+    {/* {formSubmitted && <Animation class="canvas"><div class="notepad">
     <div class="cover">
     </div>
     <div class="page one">
@@ -66,11 +75,9 @@ function Contact() {
   </div>
   <div class="pencil">
     <div class="edge"></div>
-  </div>
-</Animation>
-    {formSubmitted && <ThankYouMessage>Thank you for submitting!</ThankYouMessage>}
-
-        </Form>
+  </div></Animation>} */}
+<Form/>
+        {/* </Form> */}
       </Container>
      </Section>
      </>
@@ -86,10 +93,7 @@ background-position:top;
 height:80vh;
   `
 
-const Form = styled.div`
-color:#000;
-position:relative;
-`
+
 const Text = styled.div`
 h2{
   font-size:32px;
@@ -129,15 +133,10 @@ width:fit-content;
 min-width:150px;
 cursor:pointer;
 `
-const ThankYouMessage = styled.div`
-color: #47d147;
-margin-top: 10px;
-text-align:center;
-font-size:19px;
-font-weight:500;
-`
 const Animation = styled.div`
-display: ${(props) => (props.isHidden ? 'block' : 'none')};
+// display: ${(props) => (props.isHidden ? 'block' : 'none')};
 position:absolute;
-left:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 40px;
 `

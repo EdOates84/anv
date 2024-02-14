@@ -24,7 +24,7 @@ ${props =>
 `};
 `
 export const Section = styled.section`
-padding: 40px 0 60px;
+padding: 60px 0;
 overflow: hidden;
 background-color: white;
 `

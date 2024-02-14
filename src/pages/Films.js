@@ -11,6 +11,8 @@ import play from "../images/play.svg";
 import Navbar from './Navbar';
 import ReactPlayer from 'react-player'
 import "../Confetti.css"
+import Footer from '../Footer';
+import Form from '../Form';
 const Films= () =>  {
   // let redPlayButton = document.getElementById('youtube-iframe').contentWindow.document.getElemenClassName('ytp-large-play-button')[0];
   // redPlayButton.style.background = play;
@@ -156,6 +158,8 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
+
   playIcon={<Button>
 
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
@@ -182,6 +186,8 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
+
   playIcon={<Button>
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 300 300" xmlSpace="preserve">
@@ -208,6 +214,8 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
+
   playIcon={<Button>
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 300 300" xmlSpace="preserve">
@@ -232,6 +240,7 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
   playIcon={<Button>
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 300 300" xmlSpace="preserve">
@@ -259,6 +268,8 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
+
   playIcon={<Button>
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 300 300" xmlSpace="preserve">
@@ -283,6 +294,8 @@ const Films= () =>  {
   width="100%"
   // height="100%"
   playing
+  controls={true}
+
   playIcon={<Button>
 <svg fill="#f4dcdc" height="60px" width="60px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 300 300" xmlSpace="preserve">
@@ -304,6 +317,10 @@ const Films= () =>  {
       </Grid>
       </StyledContainer>
       </Section>
+      <div id="contactus">
+      <Form />
+      </div>
+      <Footer/>
       </>
     );
   }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container, Section } from '../style';
 import Navbar from "./Navbar";
 import Modal from "react-modal";
 import "../Gallery.css"
@@ -20,14 +19,16 @@ import i13 from "../images/i13.jpg";
 import i14 from "../images/i14.jpg";
 import i15 from "../images/i15.jpg";
 import i16 from "../images/i16.jpg";
+import Footer from '../Footer';
+import Form from '../Form';
 
 const Images= () =>  {
   
     return (
       <div >
         <Navbar/>
-<Section>
- <h1>Responsive Image Gallery</h1>
+<StyledSection style={{background:'rgb(244, 220, 220)'}}>
+ <h1>Timeless images for you to remember how it all felt. </h1>
 <div id="gallery" class="container-fluid">  
   <img src={i1} class="img-responsive" />
   <img src={i2} class="img-responsive" />
@@ -62,61 +63,25 @@ const Images= () =>  {
 
   </div>
 </div>
-</Section>
-<div>
-<div>
-  <Img>
-<img src={i1} />
-  </Img>
-  <Img className="a">
-<img src={i2} />
-  </Img>
-  <Img>
-<img src={i3} />
-  </Img>
-  <Img className="a">
-<img src={i4} />
-  </Img>
-  <Img>
-<img src={i5} />
-  </Img>
-  <Img className="a">
-<img src={i6} />
-  </Img>
-  <Img>
-<img src={i7} />
-  </Img>
-  <Img className="a">
-<img src={i8} />
-  </Img>
-  <Img>
-<img src={i9} />
-  </Img>
-  <Img>
-{/* <img src={i9} /> */}
-  </Img>
-</div>
-</div>
+</StyledSection>
+<div id="contactus">
+      <Form />
+      </div>
+<Footer/>
       </div>
     );
   }
   
 export default Images;
-const Img = styled.div`
-position:sticky;
-top:10vh;
-display:flex;
-justify-content:center;
-align-items:center;
-height:40vh;
 
-  img{
-max-width:60vw;
-max-height:70vh;
-  }
-  &.a{
-    img{
-      transform:rotate(10deg);
-    }
-  }
-  `
+const StyledSection = styled.section`
+padding: 40px 0 60px;
+overflow: hidden;
+h1{
+  font-size:32px;
+  font-family: fantasy;
+
+  font-weight:500;
+  color:brown;
+}
+`

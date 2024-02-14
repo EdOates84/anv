@@ -154,6 +154,7 @@ body {
     right: -5%;
     width: 15%;
     height: 35%;
+    margin-bottom:40px;
     border-radius: 10% 10% 0 0;
     background: linear-gradient(#dd574b 20%, #bbb 20%, #bbb 30%, #e67e22 30%, #e67e22 72%, #ffe0a7 72%, #ffe0a7 85%, transparent 85%);
     overflow: hidden;

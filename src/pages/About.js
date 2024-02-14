@@ -5,11 +5,14 @@ import img from "../images/nakul.JPG";
 import Navbar from './Navbar';
 import "../Wave.css"
 import "../Divider.css"
+import Form from '../Form';
+import Footer from '../Footer';
 const About= () =>  {
   return (
     <>
     <Navbar/>
-    <Section style={{paddingTop:'0px'}}>
+    <Section style={{paddingTop:'0px', paddingBottom:'0px', background:'#000'}}>
+      {/* <Container> */}
         <Grid>
 <Img>
 <img src={img}/>
@@ -25,9 +28,9 @@ Hello! I'm Nakul Chouhan, a wedding cinematographer based in Kota, Rajasthan. I 
 </Text>
         </Grid>
          
-
+        {/* </Container> */}
     </Section>
-    <Section style={{position:'relative'}}>
+    <Section style={{background:'transparent', padding:'0px'}}>
     <svg className="editorial" viewBox="0 24 150 28" preserveAspectRatio="none">
   <defs>
     <path
@@ -51,6 +54,10 @@ Hello! I'm Nakul Chouhan, a wedding cinematographer based in Kota, Rajasthan. I 
 
 
     </Section>
+    <div id="contactus">
+      <Form />
+      </div>
+      <Footer/>
     </>
   );
 }
@@ -58,20 +65,27 @@ Hello! I'm Nakul Chouhan, a wedding cinematographer based in Kota, Rajasthan. I 
 export default About;
 const Grid = styled.div`
 display:grid;
-grid-template-columns:1.5fr 1fr;
+grid-template-columns:1fr 1fr;
 background:#000;
 min-height:100vh;
-@media (max-width: 500px) {
+padding:0px 40px;
+@media (max-width: 700px) {
   grid-template-columns:1fr;
 
 }
 `
 const Img = styled.div`
 width:100%;
+display:flex;
+align-items:center;
 img{
   width: 100%;
-    object-fit: cover;
-    height: 100%;
+  border-radius: 0px 40px 40px 0px;
+}
+@media (max-width: 700px) {
+
+padding: 24px;
+padding-bottom: 0px;
 }
 `
 const Text = styled.div`
@@ -79,17 +93,16 @@ padding:40px 24px;
 display: flex;
 flex-direction:column;
     justify-content: center;
-    align-items:center;
+    // align-items:center;
 h5{
   color:#fff;
 font-size:24px;
 font-weight:400;
-max-width:300px;
 
 }
 h3{
   color:#fff;
-  font-size:29px;
+  font-size:24px;
   font-weight:600;
 }
 `

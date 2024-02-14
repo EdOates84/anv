@@ -11,10 +11,20 @@ import i3 from "../images/i3.jpg";
 import i4 from "../images/i4.jpg";
 import i5 from "../images/i5.jpg";
 import i6 from "../images/i6.jpg";
-import bg from "../images/bg-home-video.mp4";
+import i7 from "../images/i7.jpg";
+import i8 from "../images/i8.jpg";
+import i9 from "../images/i9.jpg";
+import i10 from "../images/i10.jpg";
+import i11 from "../images/i11.jpg";
+import i12 from "../images/i12.jpg";
+import i13 from "../images/i13.jpg";
+import i14 from "../images/i14.jpg";
+import bg from "../images/home-video.mp4";
 import "../Marquee.css"
 import "../Bubble.css"
 import ReactPlayer from 'react-player';
+import Form from '../Form';
+import { Link } from 'react-scroll';
 
 const Home= () =>  {
   const panels = document.querySelectorAll('.panel');
@@ -34,8 +44,9 @@ function removeActiveClasses(){
 
     return (
       <div >
-        <StyledSection >
         <Navbar/>
+
+        <StyledSection >
 
           <Video>
       <video  autoPlay loop muted>
@@ -66,9 +77,7 @@ function removeActiveClasses(){
 Moments that last forever
 </p>
       </Text>
-      {/* <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260"><path fill="#f5dfe5"  d="M0,96L30,128C60,160,120,224,180,218.7C240,213,300,139,360,133.3C420,128,480,192,540,229.3C600,267,660,277,720,250.7C780,224,840,160,900,122.7C960,85,1020,75,1080,96C1140,117,1200,171,1260,176C1320,181,1380,139,1410,117.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
-      </svg> */}
-
+   
 
 <svg class="wave" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
   <defs>
@@ -95,6 +104,7 @@ Ever After Weddings perfectly captured the joy and magic of our special day. The
 
 
         </Review>
+
       </Section>
       <Section>
         <div className="containerm">
@@ -107,7 +117,7 @@ Ever After Weddings perfectly captured the joy and magic of our special day. The
 </svg>
 
           </h2>
-        <div class="marquee">
+        <div  class="marquee">
   <div class="marquee__group">
     <img src={i1} alt=''/>
     <img src={i2} alt=''/>
@@ -126,24 +136,27 @@ Ever After Weddings perfectly captured the joy and magic of our special day. The
 </div>
 <div class="marquee marquee--reverse">
   <div class="marquee__group">
-    <img src={i6} alt=''/>
-    <img src={i5} alt=''/>
-    <img src={i1} alt=''/>
-    <img src={i2} alt=''/>
-    <img src={i3} alt=''/>
+    <img src={i7} alt=''/>
+    <img src={i8} alt=''/>
+    <img src={i9} alt=''/>
+    <img src={i10} alt=''/>
+    <img src={i11} alt=''/>
   </div>
 
   <div aria-hidden="true" class="marquee__group">
-  <img src={i4} alt=''/>
-  <img src={i5} alt=''/>
-    <img src={i6} alt=''/>
-    <img src={i3} alt=''/>
-    <img src={i4} alt=''/>
+  <img src={i12} alt=''/>
+  <img src={i13} alt=''/>
+    <img src={i14} alt=''/>
+    <img src={i1} alt=''/>
+    <img src={i2} alt=''/>
   </div>
 </div>
 
         </div>
       </Section>
+      <div id="contactus">
+      <Form />
+      </div>
         <Footer/>
       </div>
     );
@@ -152,11 +165,11 @@ Ever After Weddings perfectly captured the joy and magic of our special day. The
   export default Home;
   
 const StyledSection = styled(Section)`
-padding-top:0px;
+// padding-top:0px;
 padding-bottom:0px;
-  background:transparent;
-  position:relative;
-top:0vh;
+//   background:transparent;
+//   position:relative;
+// top:0vh;
   height:100vh;
 
   `
@@ -164,9 +177,9 @@ top:0vh;
 width:100%;
 height:100%;
 overflow:hidden;
-position:absolute;
-top:0;
-left:0;
+// position:absolute;
+// top:0;
+// left:0;
 iframe{
   height: 100vh;
   width: 100vw;
@@ -188,6 +201,8 @@ video{
   text-align: left;
   padding-left: 24px;
   h1{
+font-family: fantasy;
+
     color:#fff;
     font-size:46px;
     margin-bottom:0px !important;
@@ -197,6 +212,8 @@ video{
   }
   p{
     color:#fff;
+font-family: fantasy;
+
     font-size:20px;
     font-weight:400;
     margin-top:0px !important;
