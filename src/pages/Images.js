@@ -84,4 +84,9 @@ h1{
   font-weight:500;
   color:brown;
 }
+@media(max-width:400px){
+  h1{
+    font-size:27px;
+  }
+}
 `

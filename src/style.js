@@ -27,4 +27,7 @@ export const Section = styled.section`
 padding: 60px 0;
 overflow: hidden;
 background-color: white;
+@media (max-width: 500px) {
+padding-bottom:40px;
+}
 `

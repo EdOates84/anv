@@ -11,7 +11,7 @@ const About= () =>  {
   return (
     <>
     <Navbar/>
-    <Section style={{paddingTop:'0px', paddingBottom:'0px', background:'#000'}}>
+    <Section style={{paddingTop:'0px', paddingBottom:'0px', background:'#000', position:'relative'}}>
       {/* <Container> */}
         <Grid>
 <Img>
@@ -22,15 +22,14 @@ const About= () =>  {
 Hello! I'm Nakul Chouhan, a wedding cinematographer based in Kota, Rajasthan. I approach my work with a relaxed and empathetic attitude, ensuring couples feel at ease in front of the camera. I focus on capturing authenticity and the unique moments that make each wedding special. My goal is to be your friend and professional, telling your story in a way that reflects your style. Thanks for considering me as your wedding cinematographer – excited to capture your special day!
 
   </h5>
-  <h3>- Nakul Chouhan <br/>
-  Founder
+  <h3>- Nakul Chouhan, Founder
+  
   </h3>
 </Text>
         </Grid>
          
         {/* </Container> */}
-    </Section>
-    <Section style={{background:'transparent', padding:'0px'}}>
+        <Section style={{background:'transparent', padding:'0px'}}>
     <svg className="editorial" viewBox="0 24 150 28" preserveAspectRatio="none">
   <defs>
     <path
@@ -54,6 +53,8 @@ Hello! I'm Nakul Chouhan, a wedding cinematographer based in Kota, Rajasthan. I 
 
 
     </Section>
+    </Section>
+    
     <div id="contactus">
       <Form />
       </div>
@@ -69,9 +70,10 @@ grid-template-columns:1fr 1fr;
 background:#000;
 min-height:100vh;
 padding:0px 40px;
+gap:40px;
 @media (max-width: 700px) {
   grid-template-columns:1fr;
-
+gap:0px;
 }
 `
 const Img = styled.div`
@@ -82,14 +84,14 @@ img{
   width: 100%;
   border-radius: 0px 40px 40px 0px;
 }
-@media (max-width: 700px) {
+// @media (max-width: 700px) {
 
-padding: 24px;
-padding-bottom: 0px;
-}
+// padding: 24px;
+// padding-bottom: 0px;
+// }
 `
 const Text = styled.div`
-padding:40px 24px;
+// padding:40px 24px;
 display: flex;
 flex-direction:column;
     justify-content: center;
@@ -104,5 +106,14 @@ h3{
   color:#fff;
   font-size:24px;
   font-weight:600;
+}
+@media (max-width: 440px) {
+h5{
+  font-size:19px;
+  margin-bottom:0px;
+}
+h3{
+  font-size:20px;
+}
 }
 `

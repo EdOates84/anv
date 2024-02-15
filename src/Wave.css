@@ -7,7 +7,7 @@
   max-height: 60px;
   margin: 0;
   z-index:5;
-  bottom:0;
+  bottom:-25px;
   position:absolute;
   left:0px;
   float:left;

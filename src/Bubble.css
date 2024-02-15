@@ -7,6 +7,9 @@
     transition: 0.3s */
   }
   
-
-
-  
+@media(max-width:400px){
+ .wave{
+  left: -64px;
+  width: 204%;
+ }
+}

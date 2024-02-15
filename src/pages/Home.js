@@ -202,7 +202,6 @@ video{
   padding-left: 24px;
   h1{
 font-family: fantasy;
-
     color:#fff;
     font-size:46px;
     margin-bottom:0px !important;
@@ -222,7 +221,7 @@ font-family: fantasy;
   @media(max-width:500px){
     top:70vh;
     h1{
-      font-size:29px;
+      font-size:24px;
     }
     p{
       font-size:17px;

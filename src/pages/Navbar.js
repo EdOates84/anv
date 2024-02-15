@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 import logo from "../images/anv.jpeg";
 import { Link } from 'react-scroll';
+import styled from "styled-components"
 
 
 const Navbar = () => {
+
   const [showNavbar, setShowNavbar] = useState(false)
 
   const handleShowNavbar = () => {
@@ -54,7 +56,6 @@ const Navbar = () => {
       <span></span>
     </label>
   </div>
-  
   <ul class="nav-list">
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/images">Gallery</NavLink></li>

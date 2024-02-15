@@ -147,8 +147,13 @@ const Films= () =>  {
   </div>
 </div>
 
-
+<Text>
+  <h2>
+  Your Love story in a unique wedding video
+  </h2>
+</Text>
       <Grid>
+      
  <A >
 {/* <video  autoPlay loop muted>
 </video> */}
@@ -327,14 +332,19 @@ const Films= () =>  {
   
   export default Films;
   
-  const Video = styled.div`
-  margin:0px 10px;
-  background:pink;
-  height:30vh;
-iframe{
-  height: 100%;
-    width: 100%;
+  const Text = styled.div`
+ h2{
+  font-size:32px;
+  font-family: fantasy;
+
+  font-weight:500;
+  color:brown;
  }
+ @media(max-width:400px){
+  h2{
+    font-size:27px;
+  }
+}
   `
   const StyledContainer = styled(Container)`
   @media (max-width: 460px){
