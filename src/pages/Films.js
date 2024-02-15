@@ -333,6 +333,7 @@ const Films= () =>  {
   export default Films;
   
   const Text = styled.div`
+  text-align:center;
  h2{
   font-size:32px;
   font-family: fantasy;

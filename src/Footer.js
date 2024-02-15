@@ -1,7 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Footer.css'
 import anv from "./images/anv.jpeg"
+import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll';
+import styled from "styled-components"
+
+
 const Footer= () =>  {
+    
+useEffect(() => {
+    window.scrollTo(0, 0);
+ }, []);
   
     return (
         <div>
@@ -13,15 +22,15 @@ const Footer= () =>  {
                         <img style={{width:'70px'}} src={anv} />
         
                         <p class="footer-links">
-                            <a href="#" class="link-1">Home</a>
+                           <SNavLink class="link-1" to="/" >Home</SNavLink>
                             
-                            <a href="#">Images</a>
+                            <NavLink to="/images">Images</NavLink>
                         
-                            <a href="#">Films</a>
+                           <NavLink to="/films">Films</NavLink>
                         
-                            <a href="#">About</a>
+                           <NavLink to="/about">About</NavLink>
                                                         
-                            <a href="#">Contact</a>
+                           <NavLink to="/contact">Contact</NavLink>
                         </p>
         
                         <p class="footer-company-name">Anv productions © 2015</p>
@@ -41,7 +50,7 @@ const Footer= () =>  {
         
                         <div>
                             <i class="fa fa-envelope"></i>
-                            <p><a href="mailto:support@company.com">anvproduction.8910@gmail.com</a></p>
+                            <p><a href="mailto:anvproduction.8910@gmail.com">anvproduction.8910@gmail.com</a></p>
                         </div>
         
                     </div>
@@ -78,4 +87,10 @@ const Footer= () =>  {
   
   export default Footer;
 
+const SNavLink = styled(NavLink)`
 
+    a::before {
+        content: '' !important; 
+      }
+
+`
