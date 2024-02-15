@@ -124,6 +124,7 @@ iframe#webpack-dev-server-client-overlay{display:none!important}
   display: flex;
     align-items: center;
     padding:4px 0px;
+    cursor:pointer;
 }
 .nav > .nav-header > .nav-title img{
   height:50px;

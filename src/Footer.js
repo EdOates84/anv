@@ -22,7 +22,7 @@ useEffect(() => {
                         <img style={{width:'70px'}} src={anv} />
         
                         <p class="footer-links">
-                           <SNavLink class="link-1" to="/" >Home</SNavLink>
+                           <a class="link-1" href="/" >Home</a>
                             
                             <NavLink to="/images">Images</NavLink>
                         
@@ -88,8 +88,8 @@ useEffect(() => {
   export default Footer;
 
 const SNavLink = styled(NavLink)`
-
-    a::before {
+content:none;
+.footer-distributed .footer-links a:before {
         content: '' !important; 
       }
 

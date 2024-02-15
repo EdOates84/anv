@@ -49,7 +49,7 @@ function removeActiveClasses(){
         <StyledSection >
 
           <Video>
-      <video  autoPlay loop muted>
+      <video  autoPlay playsinline loop muted>
       <source src={bg} type="video/mp4"/>
       </video>
       {/* <ReactPlayer

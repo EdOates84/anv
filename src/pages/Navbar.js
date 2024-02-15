@@ -4,49 +4,24 @@ import './Navbar.css'
 import logo from "../images/anv.jpeg";
 import { Link } from 'react-scroll';
 import styled from "styled-components"
-
+// import { useHistory } from 'react-router-dom';
 
 const Navbar = () => {
 
   const [showNavbar, setShowNavbar] = useState(false)
-
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
-
+  const handleClick = () => {
+    window.location.href = '/';
+  }
   return (
-    // <nav className="navbar">
-    //   <div className="containernav">
-    //     <div className="logo">
-    //     </div>
-    //     <div className="menu-icon" onClick={handleShowNavbar}>
-    //     </div>
-    //     <div className={`nav-elements  ${showNavbar && 'active'}`}>
-    //       <ul>
-    //         <li>
-    //           <NavLink to="/">Home</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/images">Images</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/films">Films</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/about">About</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/contact">Contact</NavLink>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </nav>
+  
     <nav class="nav">
   <input type="checkbox" id="nav-check"/>
   <div class="nav-header">
     <div class="nav-title">
-      <img src={logo}/>
+      <img onClick={handleClick} src={logo}/>
     </div>
   </div>
   <div class="nav-btn">
