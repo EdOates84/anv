@@ -49,9 +49,10 @@ function removeActiveClasses(){
         <StyledSection >
 
           <Video>
-      <video  autoPlay playsinline loop muted>
+      <video  autoPlay muted loop playsinline  >
       <source src={bg} type="video/mp4"/>
       </video>
+      
       {/* <ReactPlayer
   url="https://youtu.be/XKSzi73LGLo?si=C2wOJGbPCiIjvfh-"
   width="100%"
@@ -78,7 +79,7 @@ Moments that last forever
 </p>
       </Text>
    
-
+{/* 
 <svg class="wave" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
   <defs>
    <path id="wavepath" d="M 0 2000 0 500 Q 140.5 398 281 500 t 281 0 281 0 281 0 281 0 281 0  v1000 z" /> 
@@ -87,7 +88,7 @@ Moments that last forever
    <use xlinkHref="#wavepath" y="413" fill="#f5dfe5">
    </use>
   </g>
-</svg>
+</svg> */}
         </StyledSection>
       <Section style={{background:'#f5dfe5'}}>
       
@@ -171,7 +172,12 @@ padding-bottom:0px;
 //   position:relative;
 // top:0vh;
   height:100vh;
-
+@media(max-width:500px){
+  background-image:url(${i13});
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   `
   const Video = styled.div`
 width:100%;
@@ -189,6 +195,9 @@ video{
   height: 100vh;
   width: 100vw;
   object-fit: cover;
+}
+@media(max-width:500px){
+  display:none;
 }
   `
 
